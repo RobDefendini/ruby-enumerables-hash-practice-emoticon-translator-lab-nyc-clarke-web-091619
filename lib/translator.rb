@@ -13,7 +13,9 @@ def load_library(file_path)
     end 
   response
 end
+
 ####
+
 def get_japanese_emoticon(file_path, emoticon)
                                           # code goes here
     response = nil
@@ -39,6 +41,7 @@ def get_english_meaning(file_path, emoticon)
     library = load_library(file_path)
     library["get_meaning"].each do |english, meaning|
     if emoticon == english
+      binding.pry
       response = meaning
     end
   end
